@@ -1,0 +1,19 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Create an SNS Topic in the Mumbai region
+
+Resources:
+  MySNSTopic:
+    Type: 'Newtopic(031)'
+    Properties:
+      DisplayName: 'Newtopic(31)'
+      Subscription:
+        - Endpoint: 'sumanth1639@gmail.com'
+          Protocol: 'email'
+      Tags:
+        - Key: 'Environment'
+          Value: 'Development'
+
+Outputs:
+  TopicArn:
+    Description: 'ARN of the SNS Topic'
+    Value: !Ref MySNSTopic
